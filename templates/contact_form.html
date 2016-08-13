@@ -1,0 +1,22 @@
+<!-- {% load staticfiles %} Include this to use staticfiles on your form. -->
+
+{% block content %}
+<html>
+  <title>Contact</title>
+  <body>
+    <!-- Form Insertion  -->
+    <form role="form" action="" method="post">
+        {% csrf_token %} <!-- Cross Site Request Forgery protection, don't remove this. -->
+        {{ form.as_p }} <!-- Wraps your form elements in <p> -->
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <!-- Alerts user error/success message based on message status after reload. -->
+    {% if messages %}
+      {% for message in messages %}
+        <script>alert('{{ message }}')</script>
+      {% endfor %}
+    {% endif %}
+  </body>  
+</html>
+{% endblock %}
