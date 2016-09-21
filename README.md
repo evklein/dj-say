@@ -94,6 +94,10 @@ In `message_template.html` add: ` Favorite Horse: {{ favorite_horse }}`
 
 Ta-da! Your new element should be implemented. 
 
+# Upcoming Features
+* Added customization settings
+* reCAPTCHA implementation
+
 # License
 
 dj-say is registred under the MIT License. This project is free to use, modify, and redistribute by anybody. 
